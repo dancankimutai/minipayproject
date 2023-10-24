@@ -8,7 +8,7 @@ function Button({ text, onClick, loading }: Props) {
         <button
             type="button"
             onClick={onClick}
-            className="mb-4 Otext-gray-908 bg-gradient-to-r from-teal-200 to-lime-208"
+            className="bg-black rounded-full text-white font-medium px-9 py-3 sm:mt-10 mt-8 hover:bg-black/80 mx-auto"
         >
             {loading === true && (
                 <svg

@@ -7,6 +7,7 @@ export default function Home() {
   const [userAddress, setUserAddress] = useState("");
   const [loading, setLoading] = useState(false);
   const { address, isConnected } = useAccount();
+  const [externalAddress, setExternalAddress] = useState("");   
   const [amount, setAmount] = useState("");
 
   useEffect(() => {
@@ -14,28 +15,38 @@ export default function Home() {
       setUserAddress(address);
     }
   }, [address, isConnected]);
+ 
+
 
 return (
      <div className="flex flex-cot justify-center items-center w-full">
         <div className="-full flex flex-col justify-center items-start px-7">
-          <div className="h2 text-center mb-4"> 
-          Your address: {userAddress.substring(0, 5)}...
-      {userAddress.substring (userAddress.length - 4, userAddress.length)}
-      </div>
+        <p className="mx-auto max-w-xl text-lg text-slate-700 leading-8 font-semibold">
+          Withdraw CUSD tokens from Minipay to your CUSD compatible wallet address.Standard fee of 0.2 CUSD for all withdrawals.
+        </p> 
+      {/* Add a text input field to the HTML document to get the withdrawal address from the user. */}
+      <input
+          type="text"
+          placeholder="  Enter Withdrawal address"
+          value={externalAddress}
+          onChange={(e) => setExternalAddress(e.target.value)}
+          className="border -b border-black mt-5 mb-8 rounded-lg w-full h-11 text-center"
+        />
       {/* Add a text input field to the HTML document to get the amount from the user. */}
       <input
         type="number"
-        placeholder="Amount"
+        placeholder="  Enter Amount e.g 1"
         value={amount}
         onChange={(e) => setAmount(e.target.value)}
+        className="border -b border-black mb-2 rounded-lg w-full h-11 text-center"
       />
-      <Button
+      <Button 
         text="Withdraw CUSD"
         loading={loading}
-      onClick={async()=>{
+        onClick={async()=>{
         setLoading(true);
         await transferCUSD(
-          "0x52d3b03f31c5aaf3feb670f550a81b01206234bb",//my account
+           externalAddress,
            address as string,
            amount
            );
