@@ -2,8 +2,11 @@ type Props = {
     text: string;
     onClick: () => void;
     loading: boolean;
+
 };
-function Button({ text, onClick, loading }: Props) {
+
+function Button({ text, onClick, loading}: Props ){
+    
     return (
         <button
             type="button"
@@ -28,7 +31,9 @@ function Button({ text, onClick, loading }: Props) {
                     />
                  </svg>
             )}
-            {loading === true ? "Loading..." : text}
+            {loading === true ? "Sending..." : text}         
+                  
+
         </button>
     );}
     export default Button;
