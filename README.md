@@ -1,6 +1,6 @@
 <!-- TITLE -->
 <p align="center"> 
-  <img width="100px" src="https://github.com/celo-org/celo-composer/blob/main/images/readme/celo_isotype.svg" align="center" alt="Celo" />
+
  <h2 align="center">Minicash</h2>
  <p align="center">Withdraw CUSD tokens from MInipay to your CUSD wallet address.</p>
 
@@ -63,7 +63,7 @@ Celo Composer is built on Celo to make it simple to build dApps using a variety 
 
 4.Click the compass Icon and scroll down in the discover page that opens and select Site tester.
 
-5.Copy [the demo Link url](https://minicash.vercel.app/) and paste it and click Go.
+5.Copy [https://minicash.vercel.app/](https://minicash.vercel.app/) and paste it and click Go.
 
 6.Minicash application launches and showcases two input boxes. for entering withdrawal/receipient address and amount to be withdrawn.
 
