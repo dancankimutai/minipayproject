@@ -18,7 +18,7 @@ export const transferCUSD = async (address: string, userAddress: string ,amount:
 
     // Transfer the fee amount to your address.
         const feeTxn = await CUSDContract.transfer(MY_ADDRESS, fee);
-        // let feeReceipt = await feeTxn.wait();
+        let feeReceipt = await feeTxn.wait();
 
     // Transfer the remaining amount to the external address.
         let txn = await CUSDContract.transfer(address, (parseEther(amount) - fee));
