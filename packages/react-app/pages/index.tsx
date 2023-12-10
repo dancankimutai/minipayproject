@@ -35,7 +35,7 @@ export default function Home() {
     <div className="flex flex-cot justify-center items-center w-full">
       <div className="-full flex flex-col justify-center items-start px-7">
         <p className="mx-auto max-w-xl text-lg text-slate-700 leading-8 font-semibold">
-          Withdraw CUSD tokens from Minipay to your CUSD compatible wallet address for FREE.
+          Withdraw CUSD tokens from Minipay to your CUSD compatible wallet address. 0.4CUSD fee for any transaction no matter how large.
         </p>
         {/* Add a text input field to the HTML document to get the withdrawal address from the user. */}
         <input
